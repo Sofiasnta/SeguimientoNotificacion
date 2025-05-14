@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.MensajeriaVC">
+   <children>
+      <AnchorPane fx:id="sideBar" layoutX="-17.0" layoutY="-16.0" prefHeight="907.0" prefWidth="1262.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="145.0" layoutX="16.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="1247.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#ffb5c0" />
+                        <Stop color="#574aff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button fx:id="Volver" layoutX="56.0" layoutY="43.0" mnemonicParsing="false" onAction="#Volver" styleClass="button-gradient" text="Volver" />
+            <Label alignment="CENTER" layoutX="453.0" layoutY="25.0" prefHeight="124.0" prefWidth="429.0" text="Mensajeria" textAlignment="CENTER" textFill="#faf8f8">
+               <font>
+                  <Font name="Charter Black Italic" size="58.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="260.0" prefHeight="44.0" prefWidth="130.0" text="Codigo:" textAlignment="CENTER">
+               <font>
+                  <Font name="Euphemia UCAS" size="31.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_codigoMensaje" layoutX="227.0" layoutY="261.0" prefHeight="44.0" prefWidth="154.0" />
+            <Label layoutX="90.0" layoutY="345.0" prefHeight="44.0" prefWidth="136.0" text="Mensaje:">
+               <font>
+                  <Font name="Euphemia UCAS" size="31.0" />
+               </font>
+            </Label>
+            <Button fx:id="btt_Agregar" layoutX="93.0" layoutY="598.0" mnemonicParsing="false" onAction="#AgregarMensaje" prefHeight="97.0" prefWidth="133.0" styleClass="button-gradient" text="Agregar" />
+            <Button fx:id="btt_Eliminar" layoutX="94.0" layoutY="747.0" mnemonicParsing="false" onAction="#EliminarMensaje" prefHeight="94.0" prefWidth="133.0" styleClass="button-gradient" text="Eliminar" />
+            <Label alignment="CENTER" layoutX="315.0" layoutY="561.0" prefHeight="44.0" prefWidth="226.0" text="Mensajeria" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Charter Black Italic" size="27.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ffb5c0" />
+                        <Stop color="#ffb5c0" offset="0.007518796992481203" />
+                        <Stop color="#574aff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label alignment="CENTER" layoutX="761.0" layoutY="237.0" prefHeight="44.0" prefWidth="288.0" text="Información Previa" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Charter Black Italic" size="27.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ffb5c0" />
+                        <Stop color="#ffb5c0" offset="0.007518796992481203" />
+                        <Stop color="#574aff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextArea fx:id="txt_Mensaje" layoutX="282.0" layoutY="358.0" prefHeight="167.0" prefWidth="260.0" />
+            <TableView fx:id="tb_Mensajeria" layoutX="320.0" layoutY="634.0" prefHeight="168.0" prefWidth="498.0">
+               <columns>
+                  <TableColumn fx:id="tbc_Usuario" prefWidth="181.0" text="Usuario" />
+                  <TableColumn fx:id="tbc_CodigoMensaje" prefWidth="158.97698974609375" text="Codigo Mensaje" />
+                  <TableColumn fx:id="tbc_mensaje" prefWidth="157.0" text="Mensaje" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tb_Usuario" layoutX="755.0" layoutY="319.0" prefHeight="238.0" prefWidth="418.0">
+               <columns>
+                  <TableColumn fx:id="tbc_NombreUsuario" prefWidth="124.0" text="Nombre" />
+                  <TableColumn fx:id="tbc_TipoUsuario" prefWidth="152.71331787109375" text="Tipo" />
+                  <TableColumn fx:id="tbc_CanalUsuario" prefWidth="141.28668212890625" text="Canal" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../../../../../../../../Desktop/DTO-main/DTO_Record/src/main/resources/co/edu/uniquindio/poo/dto_record/Style.css" />
+   </stylesheets>
+</AnchorPane>

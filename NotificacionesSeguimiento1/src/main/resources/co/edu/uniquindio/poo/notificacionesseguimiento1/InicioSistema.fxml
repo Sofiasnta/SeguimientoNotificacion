@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="652.0" prefWidth="906.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.InicioSistemasVC">
+   <children>
+      <AnchorPane layoutX="64.0" layoutY="63.0" prefHeight="543.0" prefWidth="788.0" style="-fx-background-color: transparent;">
+         <children>
+            <AnchorPane layoutX="305.0" layoutY="103.0" prefHeight="347.0" prefWidth="421.0" style="-fx-background-radius: 25; -fx-background-color: white;">
+               <children>
+                  <Button fx:id="btnUsuarios" layoutX="142.0" layoutY="108.0" mnemonicParsing="false" onAction="#onAbrirVistaUsuarios" prefHeight="42.0" prefWidth="170.0" styleClass="button-gradient" text="Usuarios" />
+                  <Label layoutX="118.0" layoutY="19.0" prefHeight="63.0" prefWidth="206.0" text="Bienvenidos" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Charter Black Italic" size="32.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#ffb5c0" />
+                              <Stop color="#ffb5c0" offset="0.007518796992481203" />
+                              <Stop color="#574aff" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Button fx:id="btnNotificaciones" layoutX="142.0" layoutY="186.0" mnemonicParsing="false" onAction="#onAbrirVistaNotificaciones" prefHeight="42.0" prefWidth="170.0" styleClass="button-gradient" text="Notificaciones" />
+                  <Button fx:id="btt_Otros1" layoutX="142.0" layoutY="262.0" mnemonicParsing="false" onAction="#AbrirOtros" prefHeight="42.0" prefWidth="170.0" styleClass="button-gradient" text="Otros" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="sideBar1" layoutX="14.0" layoutY="33.0" prefHeight="454.0" prefWidth="348.0" style="-fx-background-radius: 25;" styleClass="colorBackground" stylesheets="file:/Users/sofiasantamariarendon/Documents/Notificaciones/NotificacionesActividad/src/main/resources/co/edu/uniquindio/poo/notificacionesactividad/Color.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="61.0" layoutY="79.0" prefHeight="84.0" prefWidth="226.0" text="Sistema" textAlignment="CENTER" textFill="#faf8f8">
+                     <font>
+                        <Font name="Charter Black Italic" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="243.0" prefHeight="113.0" prefWidth="293.0" text="Notificaciones" textAlignment="JUSTIFY" textFill="#faf8f8">
+                     <font>
+                        <Font name="Charter Black Italic" size="39.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="62.0" layoutY="163.0" prefHeight="84.0" prefWidth="226.0" text="De" textAlignment="CENTER" textFill="#faf8f8">
+                     <font>
+                        <Font name="Charter Black Italic" size="53.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button layoutX="710.0" layoutY="36.0" onAction="#cerrarAplicacion" prefHeight="49.0" prefWidth="59.0" styleClass="button-gradient2" text="X" />
+         </children>
+         <stylesheets>
+            <URL value="file:/Users/sofiasantamariarendon/Documents/PROGRAMACION%20II/Parcial2Final/src/main/resources/co/edu/uniquindio/poo/parcial2final/Style.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="file:/Users/sofiasantamariarendon/Documents/PROGRAMACION%20II/Parcial2Final/src/main/resources/co/edu/uniquindio/poo/parcial2final/Style.css" />
+   </stylesheets>
+</AnchorPane>

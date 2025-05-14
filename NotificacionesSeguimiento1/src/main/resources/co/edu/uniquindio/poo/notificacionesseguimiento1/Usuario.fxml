@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.UsuarioVC">
+   <children>
+      <AnchorPane fx:id="sideBar" layoutX="-17.0" layoutY="-16.0" prefHeight="907.0" prefWidth="1262.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="145.0" layoutX="16.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="1247.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#ffb5c0" />
+                        <Stop color="#574aff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button fx:id="Volver" layoutX="56.0" layoutY="43.0" mnemonicParsing="false" onAction="#Volver" styleClass="button-gradient" text="Volver" />
+            <Label alignment="CENTER" layoutX="453.0" layoutY="25.0" prefHeight="124.0" prefWidth="387.0" text="Usuarios" textAlignment="CENTER" textFill="#faf8f8">
+               <font>
+                  <Font name="Charter Black Italic" size="58.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="260.0" prefHeight="44.0" prefWidth="130.0" text="Nombre:" textAlignment="CENTER">
+               <font>
+                  <Font name="Euphemia UCAS" size="31.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_nombreUsuario" layoutX="227.0" layoutY="261.0" prefHeight="44.0" prefWidth="154.0" />
+            <Label layoutX="108.0" layoutY="349.0" prefHeight="37.0" prefWidth="121.0" text="Email:">
+               <font>
+                  <Font name="Euphemia UCAS" size="31.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_Email" layoutX="230.0" layoutY="348.0" prefHeight="41.0" prefWidth="158.0" />
+            <TableView fx:id="tb_Usuario" layoutX="310.0" layoutY="649.0" prefHeight="167.0" prefWidth="672.0">
+               <columns>
+                  <TableColumn fx:id="tbc_nombreUsuario" prefWidth="125.1336669921875" text="Nombre" />
+                  <TableColumn fx:id="tbc_EmailUsuario" prefWidth="160.8663330078125" text="Email" />
+                  <TableColumn fx:id="tbc_Bloqueado" prefWidth="132.82574462890625" text="Bloqueado" />
+                  <TableColumn fx:id="tbc_TipoUsuario" prefWidth="113.4122314453125" text="Tipo Usuario" />
+                  <TableColumn fx:id="tbc_CanalSeleccionado" prefWidth="137.0" text="Canal Seleccionado" />
+               </columns>
+            </TableView>
+            <Button fx:id="btt_Agregar" layoutX="93.0" layoutY="601.0" mnemonicParsing="false" onAction="#AgregarUsuario" prefHeight="45.0" prefWidth="102.0" styleClass="button-gradient" text="Agregar" />
+            <Button fx:id="btt_Eliminar" layoutX="95.0" layoutY="807.0" mnemonicParsing="false" onAction="#EliminarUsuario" prefHeight="45.0" prefWidth="107.0" styleClass="button-gradient" text="Eliminar" />
+            <Button fx:id="btt_Limpiar" layoutX="96.0" layoutY="738.0" mnemonicParsing="false" onAction="#LimpiarUsuario" prefHeight="44.0" prefWidth="107.0" styleClass="button-gradient" text="Limpiar" />
+            <Label alignment="CENTER" layoutX="346.0" layoutY="561.0" prefHeight="44.0" prefWidth="140.0" text="Usuarios" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Charter Black Italic" size="27.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ffb5c0" />
+                        <Stop color="#ffb5c0" offset="0.007518796992481203" />
+                        <Stop color="#574aff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <CheckBox fx:id="ckbx_Bloqueado" layoutX="482.0" layoutY="306.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="171.0" text="Bloqueado">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="btn_Actualizar" layoutX="92.0" layoutY="666.0" mnemonicParsing="false" onAction="#ActualizarUsuario" prefHeight="44.0" prefWidth="108.0" styleClass="button-gradient" text="Actualizar" />
+            <ComboBox fx:id="cmbx_Tipo" layoutX="325.0" layoutY="435.0" prefHeight="36.0" prefWidth="150.0" promptText="Usuario" />
+            <Label layoutX="103.0" layoutY="430.0" prefHeight="44.0" prefWidth="205.0" text="Tipo Usuario:">
+               <font>
+                  <Font name="Euphemia UCAS" size="31.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tb_canal" layoutX="870.0" layoutY="326.0" prefHeight="200.0" prefWidth="279.0">
+               <columns>
+                  <TableColumn fx:id="tbc_codigo" editable="false" prefWidth="138.91693115234375" text="Nombre" />
+                  <TableColumn fx:id="tbc_Canal" prefWidth="139.0" text="Canal" />
+               </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="848.0" layoutY="255.0" prefHeight="44.0" prefWidth="140.0" text="Canales" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Charter Black Italic" size="27.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ffb5c0" />
+                        <Stop color="#ffb5c0" offset="0.007518796992481203" />
+                        <Stop color="#574aff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../../../../../../../../Desktop/DTO-main/DTO_Record/src/main/resources/co/edu/uniquindio/poo/dto_record/color.css" />
+   </stylesheets>
+</AnchorPane>
