@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.UsuarioVC">
+<AnchorPane prefHeight="503.0" prefWidth="1192.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.UsuarioVC">
    <children>
       <AnchorPane fx:id="sideBar" layoutX="-17.0" layoutY="-16.0" prefHeight="907.0" prefWidth="1262.0">
          <children>

@@ -1,25 +1,32 @@
 package co.edu.uniquindio.poo.notificacionesseguimiento1.model;
 
-
+import java.util.*;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.LinkedList;
 
 public class Central {
+
+    private final List<Filtro> filtros;
+
 
     private String nombre;
     private Collection<Mensaje> mensajes;
     private Collection<Usuario> usuarios;
     private Collection<Canal> canales;
 
-
-
-
     public Central(String nombre) {
+
+        this.filtros = new ArrayList<>();
+        filtros.add(new UsuarioBloqueado());
+        filtros.add(new MensajeVacio());
+
 
         this.nombre = nombre;
         this.mensajes = new LinkedList<>();
         this.usuarios = new LinkedList<>();
         this.canales = new LinkedList<>();
+
     }
 
     public String getNombre() {
@@ -53,6 +60,8 @@ public class Central {
     public void setCanales(Collection<Canal> canales) {
         this.canales = canales;
     }
+
+
 
     public boolean verificarUsuario(String email) {
         for (Usuario usuario : usuarios) {
@@ -225,14 +234,35 @@ public class Central {
     }
 
 
+    public String procesarMensaje(Mensaje mensaje, NotificacionStrategy estrategia) {
+        for (Filtro filtro : filtros) {
+            String resultadoFiltro = filtro.filtrar(mensaje);
+            if (resultadoFiltro != null) {
+                return resultadoFiltro;
+            }
+        }
+
+        TemplateMensaje formato;
+        if (mensaje.getUsuario().getTipo() == Tipo.Admin) {
+            formato = new FormatoAdmin();
+        } else if (mensaje.getUsuario().getTipo() == Tipo.Cliente) {
+            formato = new FormatoCliente();
+        } else {
+            formato = new FormatoInvitado();
+        }
 
 
+        String mensajeFormateado = formato.FormatoMensaje(mensaje.getMensaje());
 
+        String resultadoEnvio = estrategia.enviar(mensajeFormateado);
 
+        agregarMensaje(mensaje);
 
+        System.out.println(resultadoEnvio);
 
+        return resultadoEnvio;
 
-
+    }
 
 
 
