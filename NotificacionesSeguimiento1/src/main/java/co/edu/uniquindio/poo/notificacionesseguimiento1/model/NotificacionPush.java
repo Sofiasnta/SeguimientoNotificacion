@@ -4,7 +4,7 @@ public class NotificacionPush implements NotificacionStrategy {
 
     @Override
     public String enviar(String mensaje) {
-        return "🔔Mensaje enviado por via Push: " + mensaje;
+        return "🔔Mensaje enviado por via Push: \n" + mensaje;
     }
 
 
