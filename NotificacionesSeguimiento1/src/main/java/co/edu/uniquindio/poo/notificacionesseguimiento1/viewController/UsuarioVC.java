@@ -273,8 +273,8 @@ public class UsuarioVC {
 
     private void mostrarInformacionUsuario(Usuario Usuario) {
         if (Usuario != null) {
-            txt_nombreUsuario.setText(Usuario.getEmail());
-            txt_Email.setText(Usuario.getNombre());
+            txt_nombreUsuario.setText(Usuario.getNombre());
+            txt_Email.setText(Usuario.getEmail());
             cmbx_Tipo.getSelectionModel().select(Usuario.getTipo());
             ckbx_Bloqueado.setSelected(Usuario.isBlocked());
         }

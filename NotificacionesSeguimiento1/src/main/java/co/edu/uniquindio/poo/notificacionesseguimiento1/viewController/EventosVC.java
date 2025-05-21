@@ -34,6 +34,8 @@ public class EventosVC {
         if (mensajeEvento != null && !mensajeEvento.trim().isEmpty()) {
             gestorEventos.notificarEvento(mensajeEvento);
             txtMensajeEvento.clear();
+
+            System.out.println("Mensajes del sistema");
             central.getMensajes().forEach(mensaje -> System.out.println(mensaje.getCodigo()));
         }
 
