@@ -7,6 +7,8 @@ import java.util.LinkedList;
 
 public class Central {
 
+    private static Central instance;
+
     private final List<Filtro> filtros;
 
 
@@ -252,7 +254,7 @@ public class Central {
         }
 
 
-        String mensajeFormateado = formato.FormatoMensaje(mensaje.getMensaje());
+        String mensajeFormateado = formato.FormatoMensaje(mensaje.getMensaje()) +", " + mensaje.getUsuario().getNombre();
 
         String resultadoEnvio = estrategia.enviar(mensajeFormateado);
 
@@ -263,6 +265,14 @@ public class Central {
         return resultadoEnvio;
 
     }
+
+    public static Central getInstance() {
+        if (instance == null) {
+            instance = new Central("Central Principal");
+        }
+        return instance;
+    }
+
 
 
 

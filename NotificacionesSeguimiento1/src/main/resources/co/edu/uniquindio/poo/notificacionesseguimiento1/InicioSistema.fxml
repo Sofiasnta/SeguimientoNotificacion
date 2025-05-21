@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.InicioSistemasVC">
+<AnchorPane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.InicioSistemasVC">
    <children>
       <AnchorPane layoutX="64.0" layoutY="63.0" prefHeight="543.0" prefWidth="788.0" style="-fx-background-color: transparent;">
          <children>
@@ -31,7 +28,7 @@
                      </textFill>
                   </Label>
                   <Button fx:id="btnNotificaciones" layoutX="142.0" layoutY="186.0" mnemonicParsing="false" onAction="#onAbrirVistaNotificaciones" prefHeight="42.0" prefWidth="170.0" styleClass="button-gradient" text="Notificaciones" />
-                  <Button fx:id="btt_Otros1" layoutX="142.0" layoutY="262.0" mnemonicParsing="false" onAction="#AbrirOtros" prefHeight="42.0" prefWidth="170.0" styleClass="button-gradient" text="Otros" />
+                  <Button fx:id="btt_Otros1" layoutX="142.0" layoutY="262.0" mnemonicParsing="false" onAction="#AbrirOtros" prefHeight="42.0" prefWidth="170.0" styleClass="button-gradient" text="Eventos" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="sideBar1" layoutX="14.0" layoutY="33.0" prefHeight="454.0" prefWidth="348.0" style="-fx-background-radius: 25;" styleClass="colorBackground" stylesheets="file:/Users/sofiasantamariarendon/Documents/Notificaciones/NotificacionesActividad/src/main/resources/co/edu/uniquindio/poo/notificacionesactividad/Color.css">

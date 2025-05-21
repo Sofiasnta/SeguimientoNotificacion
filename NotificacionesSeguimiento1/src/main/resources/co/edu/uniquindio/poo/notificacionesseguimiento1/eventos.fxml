@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.EventosVC">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="145.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" width="600.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#ffb5c0" />
+                  <Stop color="#574aff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+
+      <Label alignment="CENTER" layoutX="150.0" layoutY="25.0" prefHeight="80.0" prefWidth="300.0" text="Eventos" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Charter Black Italic" size="48.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="50.0" layoutY="160.0" text="Mensaje del Evento:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+
+      <TextArea fx:id="txtMensajeEvento" layoutX="50.0" layoutY="190.0" prefHeight="100.0" prefWidth="500.0" wrapText="true" />
+
+      <Button fx:id="btnEnviarEvento" layoutX="250.0" layoutY="310.0" mnemonicParsing="false" onAction="#enviarEvento" styleClass="button-gradient" text="Enviar a Todos" />
+
+      <Button fx:id="btnVolver" layoutX="50.0" layoutY="25.0" mnemonicParsing="false" onAction="#volver" styleClass="button-gradient" text="Volver" />
+   </children>
+</AnchorPane>

@@ -1,6 +1,7 @@
 package co.edu.uniquindio.poo.notificacionesseguimiento1;
 
 import co.edu.uniquindio.poo.notificacionesseguimiento1.model.*;
+import co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.EventosVC;
 import co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.InicioSistemasVC;
 import co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.MensajeriaVC;
 import co.edu.uniquindio.poo.notificacionesseguimiento1.viewController.UsuarioVC;
@@ -17,7 +18,7 @@ import java.io.IOException;
 
 public class App extends Application {
 
-    public static Central centralMensajeria = new Central("Sistema Notificaciones");
+    public static Central centralMensajeria = Central.getInstance();
     private boolean datosInicializados=false;
     private Stage primaryStage;
 
@@ -100,6 +101,34 @@ public class App extends Application {
             AnchorPane rootLayout = (AnchorPane) loader.load();
             MensajeriaVC mensajeriaVC = loader.getController();
             mensajeriaVC.setApp(this);
+
+            rootLayout.setOnMousePressed(event -> {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            });
+
+            rootLayout.setOnMouseDragged(event -> {
+                primaryStage.setX(event.getScreenX() - xOffset);
+                primaryStage.setY(event.getScreenY() - yOffset);
+            });
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+
+    public void eventos(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("eventos.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            EventosVC eventosVC = loader.getController();
+            eventosVC.setApp(this);
 
             rootLayout.setOnMousePressed(event -> {
                 xOffset = event.getSceneX();

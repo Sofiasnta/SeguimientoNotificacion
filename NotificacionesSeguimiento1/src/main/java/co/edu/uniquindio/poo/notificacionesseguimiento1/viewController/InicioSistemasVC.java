@@ -92,7 +92,11 @@ public class InicioSistemasVC implements Initializable {
 
         @FXML
         void AbrirOtros(ActionEvent event) {
-
+            try {
+                app.eventos();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
 
